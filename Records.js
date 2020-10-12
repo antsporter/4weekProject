@@ -1,4 +1,4 @@
-let records = [  
+let Records = [  
     {"ninumber":"ZS502747A", "fullname": "Chris P Bacon", "phone": "07659-831024", "address": "123 Elliot Hill", "department":"IT"},  
     {"ninumber":"XS130502B", "fullname": "Miles A Head", "phone": "07666-616680", "address": "321 Haha Road", "department":"Sales"},  
     {"ninumber":"MY034526D", "fullname": "Rick O'Shea", "phone": "07440-003065", "address": "64 Zoo Lane", "department":"HR"},  
@@ -14,4 +14,4 @@ let records = [
     {"ninumber":"AK625470D", "fullname": "Shirley U Care", "phone": "07569-060117", "address": "97 Holderness Drive", "department":"HR"},
     {"ninumber":"SW098272B", "fullname": "Felix Cited", "phone": "07394-529507", "address": "32 Banningham Court", "department":"Sales"},
     {"ninumber":"OB043941D", "fullname": "Sandy Beech", "phone": "07958-301691", "address": "3 Third Mount", "department":"Sales"}
-];
+]
