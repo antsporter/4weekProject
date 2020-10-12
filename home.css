@@ -1,0 +1,12 @@
+h1 {
+    text-align: center;
+}
+body {
+    background-color: lightcyan;
+    color: darkcyan;
+}
+input[type="button"] {
+    background-color: cyan;
+    margin: 10px auto;
+    padding: 10px;
+}
