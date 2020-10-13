@@ -5,24 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="home.css">
-    <link rel="recordsjs" href="records.js">
-    <title>Phoenix Beau.tique</title>
+    
+    <title>Anthony LTD</title>
 </head>
 <body>
     <script>
-        let now = new Date();
-        let welcome = "Good ";
-        function greeting() {
-            if (now.getHours() > 17) {
-                welcome += "evening.";
-                } else if(now.getHours() > 12) {
-                    welcome += "day.";
-                } else {
-                    welcome += " morning.";
-                }      
-        } 
+ 
     </script>
     <h1>HR Homepage</h1>
+
+    <div id="clockbox" class="clock" ></div>
+    <script src="clock.js"></script>
+
     <div id="data" class="container">
         <div class="center">
             <table border="1" cellpadding="1" cellspacing="1">
@@ -33,9 +27,16 @@
                     <th>Address</th>
                     <th>Department</th>
                     </tr>
+                    <td id="records"></td>
+                    <script src="records.js"></script>
             </table>
         </div>
     </div>
+
+    <input type="button" value="Add Employee" name="addEmp" id="addEmp" onclick="addRecord()">
+    <script src="addRecord.js"></script>
+    <input type="button" value="Edit Employee Details" name="editEmp">
+    <input type="button" value="Delete Employee Details" name="delEmp">
 
 </body>
 </html>
