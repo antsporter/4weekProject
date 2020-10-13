@@ -9,16 +9,29 @@
     <title>Phoenix Beau.tique</title>
 </head>
 <body>
+    <script>
+        let now = new Date();
+        let welcome = "Good ";
+        function greeting() {
+            if (now.getHours() > 17) {
+                welcome += "evening.";
+                } else if(now.getHours() > 12) {
+                    welcome += "day.";
+                } else {
+                    welcome += " morning.";
+                }      
+        } 
+    </script>
     <h1>HR Homepage</h1>
     <div id="data" class="container">
         <div class="center">
             <table border="1" cellpadding="1" cellspacing="1">
                     <tr>
-                    <td>NI Number</td>
-                    <td>Full Name</td>
-                    <td>Phone Number</td>
-                    <td>Address</td>
-                    <td>Department</td>
+                    <th>NI Number</th>
+                    <th>Full Name</th>
+                    <th>Phone Number</th>
+                    <th>Address</th>
+                    <th>Department</th>
                     </tr>
             </table>
         </div>
