@@ -8,7 +8,6 @@ function makeTable(filterbydepartment) {
             }
         }
     }
-  
     // CREATE DYNAMIC TABLE.
     let table = document.createElement("table");
     // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
@@ -34,6 +33,4 @@ function makeTable(filterbydepartment) {
     divContainer.innerHTML = "";
     divContainer.appendChild(table);
   }
-  
-  
   

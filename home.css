@@ -1,15 +1,23 @@
 h1 {
     text-align: center;
+    font-size: 40px;
 }
+h2 {
+    font-size: 30px;
+}
+
 body {
     background-color: lightcyan;
     color: darkcyan;
 }
 
 .container { 
-    height: 100px;
-    position: relative; 
+    border-collapse: collapse;
+    border-color: grey;
+    border-spacing: 0;
+    margin: 0px auto;
 }
+
 .container th {
     background-color: darkcyan;
     color: whitesmoke;
@@ -29,12 +37,8 @@ body {
     word-break: normal;
 }
   
-.center {
-    margin: 0;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+.filter {
+    font-size: 15px;
 }
 
 .clock {

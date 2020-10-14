@@ -20,4 +20,10 @@ function addRecord() {
         );
     
     makeTable(newRecords);
+    document.getElementById("addNI").value="";
+    document.getElementById("addName").value="";
+    document.getElementById("addPhone").value="";
+    document.getElementById("addAdd").value="";
+    document.getElementById("addDep").value="";
+
   }
