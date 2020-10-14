@@ -2,26 +2,25 @@
 function showAllEmp() {
 
   let records = [ 
-    {"ninumber":"ZS502747A", "fullname": "Chris P Bacon", "phone": "07659-831024", "address": "123 Elliot Hill", "department":"IT"},
-    {"ninumber":"XS130502B", "fullname": "Miles A Head", "phone": "07666-616680", "address": "321 Haha Road", "department":"Sales"},  
-    {"ninumber":"MY034526D", "fullname": "Rick O'Shea", "phone": "07440-003065", "address": "64 Zoo Lane", "department":"HR"},  
-    {"ninumber":"AK311470", "fullname": "Robyn Banks", "phone": "07342-472921", "address": "324 Langton Ridgeway", "department":"HR"},  
-    {"ninumber":"LY682275B", "fullname": "Lorne Mowers", "phone": "07822-821023", "address": "234 Julian Market", "department":"IT"},  
-    {"ninumber":"BK227215B", "fullname": "Frank N Stein", "phone": "07661-522545", "address": "12 Springfield Grange", "department":"Sales"},  
-    {"ninumber":"XB363374C", "fullname": "Hedda Hare", "phone": "07563-758264", "address": "54 Blackbird Crescent", "department":"IT"},
-    {"ninumber":"MY501327A", "fullname": "Upton O'Goode", "phone": "07401-414740", "address": "2 St Margarets Drive", "department":"IT"},
-    {"ninumber":"TT405395B", "fullname": "Marius Quick", "phone": "07870-297789", "address": "98 Earl Path", "department":"IT"},
-    {"ninumber":"AZ764036A", "fullname": "Max E Mumm", "phone": "07872-642897", "address": "233 Lady Smith Avenue", "department":"IT"},
-    {"ninumber":"ES73841C", "fullname": "Yul B Allwright", "phone": "07750-872412", "address": "45 Fountains Broadway", "department":"Sales"},
-    {"ninumber":"WX465470A", "fullname": "Lori Driver", "phone": "07773-782275", "address": "65 Burlington Lodge", "department":"HR"},
-    {"ninumber":"AK625470D", "fullname": "Shirley U-Care", "phone": "07569-060117", "address": "97 Holderness Drive", "department":"HR"},
-    {"ninumber":"SW098272B", "fullname": "Felix Cited", "phone": "07394-529507", "address": "32 Banningham Court", "department":"Sales"},
-    {"ninumber":"OB043941D", "fullname": "Sandy Beech", "phone": "07958-301691", "address": "3 Third Mount", "department":"Sales"}
+    {"NI Number":"ZS502747A", "Full Name": "Chris P Bacon", "Phone Number": "07659-831024", "Address": "123 Elliot Hill", "Department":"IT"},
+    {"NI Number":"XS130502B", "Full Name": "Miles A Head", "Phone Number": "07666-616680", "Address": "321 Haha Road", "Department":"Sales"},  
+    {"NI Number":"MY034526D", "Full Name": "Rick O'Shea", "Phone Number": "07440-003065", "Address": "64 Zoo Lane", "Department":"HR"},  
+    {"NI Number":"AK311470", "Full Name": "Robyn Banks", "Phone Number": "07342-472921", "Address": "324 Langton Ridgeway", "Department":"HR"},  
+    {"NI Number":"LY682275B", "Full Name": "Lorne Mowers", "Phone Number": "07822-821023", "Address": "234 Julian Market", "Department":"IT"},  
+    {"NI Number":"BK227215B", "Full Name": "Frank N Stein", "Phone Number": "07661-522545", "Address": "12 Springfield Grange", "Department":"Sales"},  
+    {"NI Number":"XB363374C", "Full Name": "Hedda Hare", "Phone Number": "07563-758264", "Address": "54 Blackbird Crescent", "Department":"IT"},
+    {"NI Number":"MY501327A", "Full Name": "Upton O'Goode", "Phone Number": "07401-414740", "Address": "2 St Margarets Drive", "Department":"IT"},
+    {"NI Number":"TT405395B", "Full Name": "Marius Quick", "Phone Number": "07870-297789", "Address": "98 Earl Path", "Department":"IT"},
+    {"NI Number":"AZ764036A", "Full Name": "Max E Mumm", "Phone Number": "07872-642897", "Address": "233 Lady Smith Avenue", "Department":"IT"},
+    {"NI Number":"ES73841C", "Full Name": "Yul B Allwright", "Phone Number": "07750-872412", "Address": "45 Fountains Broadway", "Department":"Sales"},
+    {"NI Number":"WX465470A", "Full Name": "Lori Driver", "Phone Number": "07773-782275", "Address": "65 Burlington Lodge", "Department":"HR"},
+    {"NI Number":"AK625470D", "Full Name": "Shirley U-Care", "Phone Number": "07569-060117", "Address": "97 Holderness Drive", "Department":"HR"},
+    {"NI Number":"SW098272B", "Full Name": "Felix Cited", "Phone Number": "07394-529507", "Address": "32 Banningham Court", "Department":"Sales"},
+    {"NI Number":"OB043941D", "Full Name": "Sandy Beech", "Phone Number": "07958-301691", "Address": "3 Third Mount", "Department":"Sales"}
 ]
 
   if (document.getElementById("departments").value=="All") {
   // EXTRACT VALUE FOR HTML HEADER. 
-  // ('Book ID', 'Book Name', 'Category' and 'Price')
   let col = [];
   for (let i = 0; i < records.length; i++) {
       for (let key in records[i]) {
@@ -33,9 +32,7 @@ function showAllEmp() {
 
   // CREATE DYNAMIC TABLE.
   let table = document.createElement("table");
-
   // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-
   let tr = table.insertRow(-1);                   // TABLE ROW.
 
   for (let i = 0; i < col.length; i++) {
@@ -46,9 +43,7 @@ function showAllEmp() {
 
   // ADD JSON DATA TO THE TABLE AS ROWS.
   for (let i = 0; i < records.length; i++) {
-
       tr = table.insertRow(-1);
-
       for (let j = 0; j < col.length; j++) {
           let tabCell = tr.insertCell(-1);
           tabCell.innerHTML = records[i][col[j]];
@@ -62,130 +57,106 @@ function showAllEmp() {
 } 
 
   if (document.getElementById("departments").value=="IT") {
-    let ITemp = records.filter(function(item){
-      return item.department == "IT"; 
+    let emp = records.filter(function(item){
+      return item.Department == "IT"; 
     });
      
     let col = [];
-    for (let i = 0; i < ITemp.length; i++) {
-        for (let key in ITemp[i]) {
+    for (let i = 0; i < emp.length; i++) {
+        for (let key in emp[i]) {
             if (col.indexOf(key) === -1) {
                 col.push(key);
             }
         }
     }
   
-    // CREATE DYNAMIC TABLE.
     let table = document.createElement("table");
-  
-    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-  
-    let tr = table.insertRow(-1);                   // TABLE ROW.
+    let tr = table.insertRow(-1);  
   
     for (let i = 0; i < col.length; i++) {
-        let th = document.createElement("th");      // TABLE HEADER.
+        let th = document.createElement("th");  
         th.innerHTML = col[i];
         tr.appendChild(th);
     }
-  
-    // ADD JSON DATA TO THE TABLE AS ROWS.
-    for (let i = 0; i < ITemp.length; i++) {
-  
+
+    for (let i = 0; i < emp.length; i++) {
         tr = table.insertRow(-1);
-  
         for (let j = 0; j < col.length; j++) {
             let tabCell = tr.insertCell(-1);
-            tabCell.innerHTML = ITemp[i][col[j]];
+            tabCell.innerHTML = emp[i][col[j]];
         }
     }
-  
-    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+
     let divContainer = document.getElementById("showData");
     divContainer.innerHTML = "";
     divContainer.appendChild(table);
   }
   if (document.getElementById("departments").value=="HR") {
-    let ITemp = records.filter(function(item){
-      return item.department == "HR"; 
+    let emp = records.filter(function(item){
+      return item.Department == "HR"; 
     });
      
     let col = [];
-    for (let i = 0; i < ITemp.length; i++) {
-        for (let key in ITemp[i]) {
+    for (let i = 0; i < emp.length; i++) {
+        for (let key in emp[i]) {
             if (col.indexOf(key) === -1) {
                 col.push(key);
             }
         }
     }
-  
-    // CREATE DYNAMIC TABLE.
+
     let table = document.createElement("table");
-  
-    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-  
-    let tr = table.insertRow(-1);                   // TABLE ROW.
+    let tr = table.insertRow(-1);   
   
     for (let i = 0; i < col.length; i++) {
-        let th = document.createElement("th");      // TABLE HEADER.
+        let th = document.createElement("th");   
         th.innerHTML = col[i];
         tr.appendChild(th);
     }
   
-    // ADD JSON DATA TO THE TABLE AS ROWS.
-    for (let i = 0; i < ITemp.length; i++) {
-  
+    for (let i = 0; i < emp.length; i++) {
         tr = table.insertRow(-1);
-  
         for (let j = 0; j < col.length; j++) {
             let tabCell = tr.insertCell(-1);
-            tabCell.innerHTML = ITemp[i][col[j]];
+            tabCell.innerHTML = emp[i][col[j]];
         }
     }
   
-    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
     let divContainer = document.getElementById("showData");
     divContainer.innerHTML = "";
     divContainer.appendChild(table);
   }
   if (document.getElementById("departments").value=="Sales") {
-    let ITemp = records.filter(function(item){
-      return item.department == "Sales"; 
+    let emp = records.filter(function(item){
+      return item.Department == "Sales"; 
     });
      
     let col = [];
-    for (let i = 0; i < ITemp.length; i++) {
-        for (let key in ITemp[i]) {
+    for (let i = 0; i < emp.length; i++) {
+        for (let key in emp[i]) {
             if (col.indexOf(key) === -1) {
                 col.push(key);
             }
         }
     }
-  
-    // CREATE DYNAMIC TABLE.
+
     let table = document.createElement("table");
-  
-    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
-  
-    let tr = table.insertRow(-1);                   // TABLE ROW.
+    let tr = table.insertRow(-1);
   
     for (let i = 0; i < col.length; i++) {
-        let th = document.createElement("th");      // TABLE HEADER.
+        let th = document.createElement("th");      
         th.innerHTML = col[i];
         tr.appendChild(th);
     }
-  
-    // ADD JSON DATA TO THE TABLE AS ROWS.
-    for (let i = 0; i < ITemp.length; i++) {
-  
+
+    for (let i = 0; i < emp.length; i++) {
         tr = table.insertRow(-1);
-  
         for (let j = 0; j < col.length; j++) {
             let tabCell = tr.insertCell(-1);
-            tabCell.innerHTML = ITemp[i][col[j]];
+            tabCell.innerHTML = emp[i][col[j]];
         }
     }
-  
-    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+
     let divContainer = document.getElementById("showData");
     divContainer.innerHTML = "";
     divContainer.appendChild(table);

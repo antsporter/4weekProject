@@ -10,13 +10,30 @@ body {
     height: 100px;
     position: relative; 
 }
+.container th {
+    background-color: darkcyan;
+    color: whitesmoke;
+    border-style: solid;
+    border-width: 2px;
+    padding: 5px 5px;
+    font-size: 30px;
+}
+.container td {
+    background-color: lightcyan;
+    border-color: lightslategrey;
+    border-style: solid;
+    border-width: 1px;
+    font-size: 20px;
+    overflow: hidden;
+    padding: 5px 5px;
+    word-break: normal;
+}
   
 .center {
     margin: 0;
     position: absolute;
     top: 50%;
     left: 50%;
-
     transform: translate(-50%, -50%);
 }
 
@@ -34,3 +51,4 @@ input[type="button"] {
     margin: 10px auto;
     padding: 10px;
 }
+

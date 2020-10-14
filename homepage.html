@@ -7,10 +7,10 @@
     <link rel="stylesheet" href="home.css">
     <script src="records.js"></script>
     <script src="addRecord.js"></script>
-    <script src="recordsFilter.js"></script>
+    <script src="showAllRecords.js"></script>
     <title>Anthony LTD</title>
 </head>
-<body>
+<body onload="showAllRecords()">
     <script>
  
     </script>
@@ -19,16 +19,18 @@
     <div id="clockbox" class="clock" ></div>
     <script src="clock.js"></script>
 
-    <table border="1" cellpadding="1" cellspacing="1" class="container center" id="showData"></table>
-    <table id="ITemp"></table>
-    <br>
     <select id="departments" onchange="showAllEmp()">
-        <option value="select">select department</option>
+        <option value="select">Select Department</option>
         <option value="All">All</option>
         <option value="IT">IT</option>
         <option value="Sales">Sales</option>
         <option value="HR">HR</option>
     </select>
+
+    <br>
+
+    <table border="1" cellpadding="1" cellspacing="1" class="container center" id="showData" ></table>
+
     <br>
 
     <input type="button" value="Add Employee" name="addEmp" onclick="addRecord()">
