@@ -5,12 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="home.css">
+    <script src="filter.js"></script>
     <script src="records.js"></script>
     <script src="addRecord.js"></script>
-    <script src="showAllRecords.js"></script>
+    <script src="makeTable.js"></script>
     <title>Anthony LTD</title>
 </head>
-<body onload="showAllRecords()">
+<body onload="makeTable(records)">
     <script>
  
     </script>
@@ -19,7 +20,7 @@
     <div id="clockbox" class="clock" ></div>
     <script src="clock.js"></script>
 
-    <select id="departments" onchange="showAllEmp()">
+    <select id="departments" onchange="filterByDpt()">
         <option value="select">Select Department</option>
         <option value="All">All</option>
         <option value="IT">IT</option>
@@ -33,9 +34,17 @@
 
     <br>
 
-    <input type="button" value="Add Employee" name="addEmp" onclick="addRecord()">
+    <input type="button" value="Add Employee Details" name="addEmp" onclick="addRecord()">
     <input type="button" value="Edit Employee Details" name="editEmp">
     <input type="button" value="Delete Employee Details" name="delEmp">
+    <br>
+    <input type="text" id="addNI" placeholder="NI Number" style="visibility: hidden;">
+    <input type="text" id="addName" placeholder="Full Name" style="visibility: hidden;">
+    <input type="text" id="addPhone" placeholder="Phone Number" style="visibility: hidden;">
+    <input type="text" id="addAdd" placeholder="Address" style="visibility: hidden;">
+    <input type="text" id="addDep" placeholder="Department" style="visibility: hidden;">
+    <input type="button" id="addRecord" value="Add Record" style="visibility: hidden;" onclick="confirmAdd()">
+
 
 </body>
 </html>
