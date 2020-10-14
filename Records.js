@@ -1,4 +1,7 @@
-let Records = [ 
+
+function showAllEmp() {
+
+  let records = [ 
     {"ninumber":"ZS502747A", "fullname": "Chris P Bacon", "phone": "07659-831024", "address": "123 Elliot Hill", "department":"IT"},
     {"ninumber":"XS130502B", "fullname": "Miles A Head", "phone": "07666-616680", "address": "321 Haha Road", "department":"Sales"},  
     {"ninumber":"MY034526D", "fullname": "Rick O'Shea", "phone": "07440-003065", "address": "64 Zoo Lane", "department":"HR"},  
@@ -16,15 +19,175 @@ let Records = [
     {"ninumber":"OB043941D", "fullname": "Sandy Beech", "phone": "07958-301691", "address": "3 Third Mount", "department":"Sales"}
 ]
 
-let i, x = "";
+  if (document.getElementById("departments").value=="All") {
+  // EXTRACT VALUE FOR HTML HEADER. 
+  // ('Book ID', 'Book Name', 'Category' and 'Price')
+  let col = [];
+  for (let i = 0; i < records.length; i++) {
+      for (let key in records[i]) {
+          if (col.indexOf(key) === -1) {
+              col.push(key);
+          }
+      }
+  }
 
-function showRecords() {
+  // CREATE DYNAMIC TABLE.
+  let table = document.createElement("table");
 
-for (i in Records.ninumber) {
-  x += Records.ninumber[i] + "<br>";
+  // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+
+  let tr = table.insertRow(-1);                   // TABLE ROW.
+
+  for (let i = 0; i < col.length; i++) {
+      let th = document.createElement("th");      // TABLE HEADER.
+      th.innerHTML = col[i];
+      tr.appendChild(th);
+  }
+
+  // ADD JSON DATA TO THE TABLE AS ROWS.
+  for (let i = 0; i < records.length; i++) {
+
+      tr = table.insertRow(-1);
+
+      for (let j = 0; j < col.length; j++) {
+          let tabCell = tr.insertCell(-1);
+          tabCell.innerHTML = records[i][col[j]];
+      }
+  }
+
+  // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+  let divContainer = document.getElementById("showData");
+  divContainer.innerHTML = "";
+  divContainer.appendChild(table);
+} 
+
+  if (document.getElementById("departments").value=="IT") {
+    let ITemp = records.filter(function(item){
+      return item.department == "IT"; 
+    });
+     
+    let col = [];
+    for (let i = 0; i < ITemp.length; i++) {
+        for (let key in ITemp[i]) {
+            if (col.indexOf(key) === -1) {
+                col.push(key);
+            }
+        }
+    }
+  
+    // CREATE DYNAMIC TABLE.
+    let table = document.createElement("table");
+  
+    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+  
+    let tr = table.insertRow(-1);                   // TABLE ROW.
+  
+    for (let i = 0; i < col.length; i++) {
+        let th = document.createElement("th");      // TABLE HEADER.
+        th.innerHTML = col[i];
+        tr.appendChild(th);
+    }
+  
+    // ADD JSON DATA TO THE TABLE AS ROWS.
+    for (let i = 0; i < ITemp.length; i++) {
+  
+        tr = table.insertRow(-1);
+  
+        for (let j = 0; j < col.length; j++) {
+            let tabCell = tr.insertCell(-1);
+            tabCell.innerHTML = ITemp[i][col[j]];
+        }
+    }
+  
+    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+    let divContainer = document.getElementById("showData");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
+  }
+  if (document.getElementById("departments").value=="HR") {
+    let ITemp = records.filter(function(item){
+      return item.department == "HR"; 
+    });
+     
+    let col = [];
+    for (let i = 0; i < ITemp.length; i++) {
+        for (let key in ITemp[i]) {
+            if (col.indexOf(key) === -1) {
+                col.push(key);
+            }
+        }
+    }
+  
+    // CREATE DYNAMIC TABLE.
+    let table = document.createElement("table");
+  
+    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+  
+    let tr = table.insertRow(-1);                   // TABLE ROW.
+  
+    for (let i = 0; i < col.length; i++) {
+        let th = document.createElement("th");      // TABLE HEADER.
+        th.innerHTML = col[i];
+        tr.appendChild(th);
+    }
+  
+    // ADD JSON DATA TO THE TABLE AS ROWS.
+    for (let i = 0; i < ITemp.length; i++) {
+  
+        tr = table.insertRow(-1);
+  
+        for (let j = 0; j < col.length; j++) {
+            let tabCell = tr.insertCell(-1);
+            tabCell.innerHTML = ITemp[i][col[j]];
+        }
+    }
+  
+    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+    let divContainer = document.getElementById("showData");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
+  }
+  if (document.getElementById("departments").value=="Sales") {
+    let ITemp = records.filter(function(item){
+      return item.department == "Sales"; 
+    });
+     
+    let col = [];
+    for (let i = 0; i < ITemp.length; i++) {
+        for (let key in ITemp[i]) {
+            if (col.indexOf(key) === -1) {
+                col.push(key);
+            }
+        }
+    }
+  
+    // CREATE DYNAMIC TABLE.
+    let table = document.createElement("table");
+  
+    // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
+  
+    let tr = table.insertRow(-1);                   // TABLE ROW.
+  
+    for (let i = 0; i < col.length; i++) {
+        let th = document.createElement("th");      // TABLE HEADER.
+        th.innerHTML = col[i];
+        tr.appendChild(th);
+    }
+  
+    // ADD JSON DATA TO THE TABLE AS ROWS.
+    for (let i = 0; i < ITemp.length; i++) {
+  
+        tr = table.insertRow(-1);
+  
+        for (let j = 0; j < col.length; j++) {
+            let tabCell = tr.insertCell(-1);
+            tabCell.innerHTML = ITemp[i][col[j]];
+        }
+    }
+  
+    // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
+    let divContainer = document.getElementById("showData");
+    divContainer.innerHTML = "";
+    divContainer.appendChild(table);
+  }
 }
-document.getElementById("records").innerHTML = x;
-
-}
-
-showRecords();

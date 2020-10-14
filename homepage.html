@@ -5,7 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="home.css">
-    
+    <script src="records.js"></script>
+    <script src="addRecord.js"></script>
+    <script src="recordsFilter.js"></script>
     <title>Anthony LTD</title>
 </head>
 <body>
@@ -17,24 +19,19 @@
     <div id="clockbox" class="clock" ></div>
     <script src="clock.js"></script>
 
-    <div id="data" class="container">
-        <div class="center">
-            <table border="1" cellpadding="1" cellspacing="1">
-                    <tr>
-                    <th>NI Number</th>
-                    <th>Full Name</th>
-                    <th>Phone Number</th>
-                    <th>Address</th>
-                    <th>Department</th>
-                    </tr>
-                    <td id="records"></td>
-                    <script src="records.js"></script>
-            </table>
-        </div>
-    </div>
+    <table border="1" cellpadding="1" cellspacing="1" class="container center" id="showData"></table>
+    <table id="ITemp"></table>
+    <br>
+    <select id="departments" onchange="showAllEmp()">
+        <option value="select">select department</option>
+        <option value="All">All</option>
+        <option value="IT">IT</option>
+        <option value="Sales">Sales</option>
+        <option value="HR">HR</option>
+    </select>
+    <br>
 
-    <input type="button" value="Add Employee" name="addEmp" id="addEmp" onclick="addRecord()">
-    <script src="addRecord.js"></script>
+    <input type="button" value="Add Employee" name="addEmp" onclick="addRecord()">
     <input type="button" value="Edit Employee Details" name="editEmp">
     <input type="button" value="Delete Employee Details" name="delEmp">
 
