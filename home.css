@@ -12,14 +12,14 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-.container { 
+.mainTable { 
     border-collapse: collapse;
     border-color: grey;
     border-spacing: 0;
     margin: 0px auto;
+    margin-top: 10px;
 }
-
-.container th {
+.mainTable th {
     background-color: darkcyan;
     color: whitesmoke;
     border-style: solid;
@@ -27,7 +27,7 @@ body {
     padding: 5px 5px;
     font-size: 30px;
 }
-.container td {
+.mainTable td {
     background-color: lightcyan;
     border-color: lightslategrey;
     border-style: solid;
@@ -37,9 +37,15 @@ body {
     padding: 5px 5px;
     word-break: normal;
 }
-  
-.filter {
+
+.bottomBoxes {
     font-size: 15px;
+    height: 30px;
+    width: 200px;
+}
+
+.filter {
+    font-size: 12px;
     background-color: darkcyan;
     color: white;
 }
@@ -61,5 +67,7 @@ input[type="button"] {
     margin: 10px auto;
     padding: 10px;
     font-size: 15px;
+
+    left:50%;
 }
 

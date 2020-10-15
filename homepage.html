@@ -21,29 +21,30 @@
     <script src="clock.js"></script>
     <h2>Filter by Department</h2>
     <select id="departments" class="filter" onchange="filterByDpt()">
-        <option value="select">Select Department</option>
-        <option value="All">All</option>
-        <option value="IT">IT</option>
-        <option value="Sales">Sales</option>
-        <option value="HR">HR</option>
+        <option value="select" class="filter">Select Department</option>
+        <option value="All" class="filter">All</option>
+        <option value="IT" class="filter">IT</option>
+        <option value="Sales" class="filter">Sales</option>
+        <option value="HR" class="filter">HR</option>
     </select>
 
     <br>
 
-    <table border="1" cellpadding="1" cellspacing="1" class="container" id="showData" ></table>
+    <table border="1" cellpadding="1" cellspacing="1" class="mainTable" id="showData" ></table>
 
     <br>
-
-    <input type="button" value="Add Employee Details" name="addEmp" onclick="addRecord()">
-    <input type="button" value="Edit Employee Details" name="editEmp">
-    <input type="button" value="Delete Employee Details" name="delEmp">
+    <div style="width: 100%;" style="height: 100%;">
+        <input type="button" value="Add Employee Details" name="addEmp" onclick="addRecord()">
+        <input type="button" value="Edit Employee Details" name="editEmp">
+        <input type="button" value="Delete Employee Details" name="delEmp">
+    </div>
     <br>
-    <input type="text" id="addNI" placeholder="NI Number" style="visibility: hidden;">
-    <input type="text" id="addName" placeholder="Full Name" style="visibility: hidden;">
-    <input type="text" id="addPhone" placeholder="Phone Number" style="visibility: hidden;">
-    <input type="text" id="addAdd" placeholder="Address" style="visibility: hidden;">
-    <input type="text" id="addDep" placeholder="Department" style="visibility: hidden;">
-    <input type="button" id="addRecord" value="Add Record" style="visibility: hidden;" onclick="confirmAdd()">
+    <input type="text" id="addNI" placeholder="NI Number" class="bottomBoxes" style="visibility: hidden;">
+    <input type="text" id="addName" placeholder="Full Name" class="bottomBoxes" style="visibility: hidden;">
+    <input type="text" id="addPhone" placeholder="Phone Number" class="bottomBoxes" style="visibility: hidden;">
+    <input type="text" id="addAdd" placeholder="Address" class="bottomBoxes" style="visibility: hidden;">
+    <input type="text" id="addDep" placeholder="Department" class="bottomBoxes" style="visibility: hidden;">
+    <input type="button" id="addRecord" value="Add Record" class="container" style="visibility: hidden;" onclick="confirmAdd()">
 
 
 </body>

@@ -10,8 +10,7 @@ function addRecord() {
   
   
   function confirmAdd() {
-    let newRecords = records;
-    newRecords.push(
+    records.push(
         {"NI Number" : document.getElementById("addNI").value,
         "Full Name" : document.getElementById("addName").value,
         "Phone Number" : document.getElementById("addPhone").value,
@@ -19,7 +18,7 @@ function addRecord() {
         "Department" : document.getElementById("addDep").value}
         );
     
-    makeTable(newRecords);
+    makeTable(records);
     document.getElementById("addNI").value="";
     document.getElementById("addName").value="";
     document.getElementById("addPhone").value="";
