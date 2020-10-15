@@ -1,3 +1,6 @@
+let tickedBox =0;
+let table ;
+
 function makeTable(filterbydepartment) {
     // EXTRACT VALUE FOR HTML HEADER. 
     let col = [];
@@ -10,7 +13,8 @@ function makeTable(filterbydepartment) {
     }
 
     // CREATE DYNAMIC TABLE.
-    let table = document.createElement("table");
+    table = document.createElement("table");
+    table.id = "myTable";
     // CREATE HTML TABLE HEADER ROW USING THE EXTRACTED HEADERS ABOVE.
     let tr = table.insertRow(-1);        // TABLE ROW.
                       
@@ -28,18 +32,18 @@ function makeTable(filterbydepartment) {
             let tabCell = tr.insertCell(-1);
             tabCell.innerHTML = filterbydepartment[i][col[j]];    
         }
-        let tickBox = document.createElement("INPUT");
+        tickBox = document.createElement("input");
         tickBox.type="checkbox";
+        tickBox.id = "tickedBox";
         let tabCell = tr.insertCell(-1);
         tabCell.appendChild(tickBox);
     }
 
-
-    
     // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
 
     let divContainer = document.getElementById("showData");
     divContainer.innerHTML = "";
     divContainer.appendChild(table);
+
   }
 

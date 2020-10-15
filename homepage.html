@@ -9,6 +9,7 @@
     <script src="records.js"></script>
     <script src="addRecord.js"></script>
     <script src="makeTable.js"></script>
+    <script src="deleteRecord.js"></script>
     <title>Anthony LTD</title>
 </head>
 <body onload="makeTable(records)">
@@ -35,8 +36,8 @@
     <br>
     <div style="width: 100%;" style="height: 100%;">
         <input type="button" value="Add Employee Details" name="addEmp" onclick="addRecord()">
-        <input type="button" value="Edit Employee Details" name="editEmp">
-        <input type="button" value="Delete Employee Details" name="delEmp">
+        <input type="button" value="Edit Employee Details" name="editEmp" onclick="editRecord()">
+        <input type="button" value="Delete Employee Details" name="delEmp" onclick="deleteRecord()">
     </div>
     <br>
     <input type="text" id="addNI" placeholder="NI Number" class="bottomBoxes" style="visibility: hidden;">
