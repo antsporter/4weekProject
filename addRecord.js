@@ -25,4 +25,11 @@ function addRecord() {
     document.getElementById("addAdd").value="";
     document.getElementById("addDep").value="";
 
+    document.getElementById("addNI").style.visibility="hidden";
+    document.getElementById("addName").style.visibility="hidden";
+    document.getElementById("addPhone").style.visibility="hidden";
+    document.getElementById("addAdd").style.visibility="hidden";
+    document.getElementById("addDep").style.visibility="hidden";
+    document.getElementById("addRecord").style.visibility="hidden";
+
   }

@@ -1,3 +1,4 @@
+
 function editRecord(id) {
         document.getElementById("addNI").style.visibility="visible";
         document.getElementById("addName").style.visibility="visible";
@@ -6,7 +7,7 @@ function editRecord(id) {
         document.getElementById("addDep").style.visibility="visible";
         saveChanges = document.createElement("input");
         saveChanges.type="button";
-        saveChanges.id = id;
+        saveChanges.id = "saveChanges"
         saveChanges.class = "hiddenButtons";
         saveChanges.value = "Save Changes";
         saveChanges.style.visibility="visible";
@@ -21,7 +22,6 @@ function editRecord(id) {
         document.getElementById("addPhone").value = records[id]["Phone Number"];
         document.getElementById("addAdd").value = records[id].Address;
         document.getElementById("addDep").value = records[id].Department;
-      
 }
 
 function confirmEdit(id) {
@@ -41,5 +41,10 @@ function confirmEdit(id) {
         document.getElementById("addPhone").style.visibility="hidden";
         document.getElementById("addAdd").style.visibility="hidden";
         document.getElementById("addDep").style.visibility="hidden";
-        document.getElementById("editButt").style.visibility="hidden";
+        document.getElementById("saveChanges").style.visibility="hidden";
+        document.getElementById("addNI").value="";
+        document.getElementById("addName").value="";
+        document.getElementById("addPhone").value="";
+        document.getElementById("addAdd").value="";
+        document.getElementById("addDep").value="";
     }
