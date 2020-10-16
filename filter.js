@@ -2,7 +2,7 @@
 function filterByDpt() {
     if (document.getElementById("departments").value=="All") {
         makeTable(records);
-        deleteButton.style.visibility="hidden";
+        
     }
     if (document.getElementById("departments").value=="IT") {
         let filtRecords = records.filter(function(item){
