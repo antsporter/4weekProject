@@ -1,3 +1,45 @@
-function editRecord() {
-    
+function editRecord(id) {
+        document.getElementById("addNI").style.visibility="visible";
+        document.getElementById("addName").style.visibility="visible";
+        document.getElementById("addPhone").style.visibility="visible";
+        document.getElementById("addAdd").style.visibility="visible";
+        document.getElementById("addDep").style.visibility="visible";
+        saveChanges = document.createElement("input");
+        saveChanges.type="button";
+        saveChanges.id = id;
+        saveChanges.class = "hiddenButtons";
+        saveChanges.value = "Save Changes";
+        saveChanges.style.visibility="visible";
+        saveChanges.onclick=()=> confirmEdit(id);
+        let newButton = document.getElementById("editButt");
+        newButton.innerHTML = "";
+        newButton.appendChild(saveChanges);
+
+
+        document.getElementById("addNI").value = records[id]["NI Number"];
+        document.getElementById("addName").value = records[id]["Full Name"];
+        document.getElementById("addPhone").value = records[id]["Phone Number"];
+        document.getElementById("addAdd").value = records[id].Address;
+        document.getElementById("addDep").value = records[id].Department;
+      
 }
+
+function confirmEdit(id) {
+    records.push(
+        {"NI Number" : document.getElementById("addNI").value,
+        "Full Name" : document.getElementById("addName").value,
+        "Phone Number" : document.getElementById("addPhone").value,
+        "Address" : document.getElementById("addAdd").value,
+        "Department" : document.getElementById("addDep").value}
+        );
+
+        records.splice(id, 1);
+        makeTable(records);
+
+        document.getElementById("addNI").style.visibility="hidden";
+        document.getElementById("addName").style.visibility="hidden";
+        document.getElementById("addPhone").style.visibility="hidden";
+        document.getElementById("addAdd").style.visibility="hidden";
+        document.getElementById("addDep").style.visibility="hidden";
+        document.getElementById("editButt").style.visibility="hidden";
+    }

@@ -1,5 +1,3 @@
-let tickedBox =0;
-let table ;
 
 function makeTable(filterbydepartment) {
     // EXTRACT VALUE FOR HTML HEADER. 
@@ -23,7 +21,6 @@ function makeTable(filterbydepartment) {
         th.innerHTML = col[i];
         tr.appendChild(th);
     }
-    
 
     // ADD JSON DATA TO THE TABLE AS ROWS.
     for (let i = 0; i < filterbydepartment.length; i++) {
@@ -32,15 +29,27 @@ function makeTable(filterbydepartment) {
             let tabCell = tr.insertCell(-1);
             tabCell.innerHTML = filterbydepartment[i][col[j]];    
         }
-        tickBox = document.createElement("input");
-        tickBox.type="checkbox";
-        tickBox.id = "tickedBox";
+        deleteButton = document.createElement("input");
+        deleteButton.type="button";
+        deleteButton.id = i;
+        deleteButton.className = "delete";
+        deleteButton.value = "Del";
+        deleteButton.style.visibility="visible";
+        deleteButton.onclick=()=> deleteRecord(i);
         let tabCell = tr.insertCell(-1);
-        tabCell.appendChild(tickBox);
+        tabCell.appendChild(deleteButton);
+
+        editButton = document.createElement("input");
+        editButton.type="button";
+        editButton.id = i;
+        editButton.className = "delete";
+        editButton.value = "Edit";
+        editButton.style.visibility="visible";
+        editButton.onclick=()=> editRecord(i);
+        tabCell.appendChild(editButton);
     }
 
     // FINALLY ADD THE NEWLY CREATED TABLE WITH JSON DATA TO A CONTAINER.
-
     let divContainer = document.getElementById("showData");
     divContainer.innerHTML = "";
     divContainer.appendChild(table);
