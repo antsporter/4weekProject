@@ -12,6 +12,29 @@ body {
     font-family: Arial, Helvetica, sans-serif;
 }
 
+body, html {
+    height: 100%;
+}
+
+.hero-image {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("HRimage.jpg");
+    height: 35%;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+  }
+  
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  }
+
 .mainTable { 
     border-collapse: collapse;
     border-color: grey;
@@ -61,12 +84,12 @@ body {
 .clock {
     margin: 0;
     position: absolute;
-    left: 2%;
-    top: 3%;
+    left: 78%;
+    top: 36%;
     -ms-transform: translate(-1%, -1%);
     transform: translate(-1%, -1%);
-    font-size: 20px;
-    color: darkslategrey;
+    font-size: 25px;
+    color: black;
 }
 
 input[type="button"] {
