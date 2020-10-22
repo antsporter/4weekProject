@@ -17,12 +17,13 @@
 <body onload="makeTable(records)">
     <div class="hero-image">
         <div class="hero-text">
-          <h1>Porter's</h1>
+            <div id="clockbox" class="clock" ></div>
+            <script src="clock.js"></script>
+          <h1>Porter's HR</h1>
         </div>
       </div>
 
-    <div id="clockbox" class="clock" ></div>
-    <script src="clock.js"></script>
+
     <h2>Filter by Department</h2>
     <select id="departments" class="filter" onchange="filterByDpt()">
         <option value="select" class="filter">Select Department</option>
@@ -47,7 +48,10 @@
     <input type="text" id="addAdd" placeholder="Address" class="bottomBoxes" style="visibility: hidden;">
     <input type="text" id="addDep" placeholder="Department" class="bottomBoxes" style="visibility: hidden;">
     <input type="button" id="addRecord" value="Add Record" class="container" style="visibility: hidden;" onclick="confirmAdd()">
+    <input type="button" id="saveChanges" value="Save Changes" class="container" style="visibility: hidden;" onclick="confirmEdit()">
     <div id="editButt"></div>
+
+    <center><iframe width="615" height="348" src="https://www.youtube.com/embed/tMpTE3Cn2Zs?autoplay=1&mute=1&loop=1"></iframe></center>
 
 </body>
 </html>

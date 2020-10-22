@@ -19,8 +19,8 @@ body, html {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("HRimage.jpg");
-    height: 35%;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Screenshot\ 2020-10-22\ at\ 14.53.46.png");
+    height: 50%;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -30,8 +30,8 @@ body, html {
   .hero-text {
     text-align: center;
     position: absolute;
-    top: 30%;
-    left: 50%;
+    top: 50%;
+    left: 30%;
     transform: translate(-50%, -50%);
     color: #DBAD6A;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
@@ -50,14 +50,14 @@ body, html {
     border-style: solid;
     border-width: 2px;
     padding: 5px 5px;
-    font-size: 30px;
+    font-size: 22px;
 }
 .mainTable td {
     background-color: #59C9A5;
     border-color: #1C2826;
     border-style: solid;
     border-width: 1px;
-    font-size: 20px;
+    font-size: 18px;
     overflow: hidden;
     padding: 5px 5px;
     word-break: normal;
@@ -70,13 +70,13 @@ body, html {
 }
 
 .filter {
-    font-size: 12px;
+    font-size: 15px;
     background-color: #59C9A5;
     color: #1C2826;
 }
 
 .delete {
-    font-size: 10px !important;
+    font-size: 8px !important;
     height: 20px !important;
     width: 20px !important;
     margin: 0px auto !important;
@@ -84,14 +84,9 @@ body, html {
 }
 
 .clock {
-    margin: 0;
-    position: absolute;
-    left: 78%;
-    top: 36%;
-    -ms-transform: translate(-1%, -1%);
-    transform: translate(-1%, -1%);
-    font-size: 25px;
-    color: #1C2826;
+
+    font-size: 15px;
+    color: #74d0e7;
 }
 
 input[type="button"] {

@@ -5,16 +5,7 @@ function editRecord(id) {
         document.getElementById("addPhone").style.visibility="visible";
         document.getElementById("addAdd").style.visibility="visible";
         document.getElementById("addDep").style.visibility="visible";
-        saveChanges = document.createElement("input");
-        saveChanges.type="button";
-        saveChanges.id = "saveChanges"
-        saveChanges.class = "hiddenButtons";
-        saveChanges.value = "Save Changes";
-        saveChanges.style.visibility="visible";
-        saveChanges.onclick=()=> confirmEdit(id);
-        let newButton = document.getElementById("editButt");
-        newButton.innerHTML = "";
-        newButton.appendChild(saveChanges);
+        document.getElementById("saveChanges").style.visibility="visible";
 
 
         document.getElementById("addNI").value = records[id]["NI Number"];
