@@ -5,12 +5,12 @@ h1 {
 }
 h2 {
     font-size: 25px;
-    color: #1C2826;
+    color: #014e98;
 }
 
 body {
-    background-color: #DBAD6A;
-    color: #1C2826;
+    background-color: #7c7c7c;
+    color: #a4d2d3;
     font-family: Arial, Helvetica, sans-serif;
 }
 
@@ -19,7 +19,7 @@ body, html {
 }
 
 .hero-image {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("Screenshot\ 2020-10-22\ at\ 14.53.46.png");
+    background-image: url("Screenshot\ 2020-10-22\ at\ 14.53.46.png");
     height: 50%;
     background-position: center;
     background-repeat: no-repeat;
@@ -33,28 +33,29 @@ body, html {
     top: 50%;
     left: 30%;
     transform: translate(-50%, -50%);
-    color: #DBAD6A;
+    color: #d1dff2;
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 
 .mainTable { 
     border-collapse: collapse;
-    border-color: grey;
+    border-color: #7c7c7c;
     border-spacing: 0;
     margin: 0px auto;
     margin-top: 10px;
 }
 .mainTable th {
-    background-color: #1C2826;
-    color: #DBAD6A;
+    background-color: #014e98;
+    color: #d1dff2;
     border-style: solid;
     border-width: 2px;
     padding: 5px 5px;
     font-size: 22px;
 }
 .mainTable td {
-    background-color: #59C9A5;
-    border-color: #1C2826;
+    background-color: #d1dff2;
+    border-color: #7c7c7c;
+    color: #0071bc;
     border-style: solid;
     border-width: 1px;
     font-size: 18px;
@@ -71,8 +72,8 @@ body, html {
 
 .filter {
     font-size: 15px;
-    background-color: #59C9A5;
-    color: #1C2826;
+    background-color: #014e98;
+    color: #d1dff2;
 }
 
 .delete {
@@ -90,8 +91,8 @@ body, html {
 }
 
 input[type="button"] {
-    background-color: #59C9A5;
-    color: #1C2826;
+    background-color: #014e98;
+    color: #d1dff2;
     margin: 10px auto;
     padding: 10px;
     font-size: 15px;
