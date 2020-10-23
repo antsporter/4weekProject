@@ -14,39 +14,36 @@
     <script src="makeTable2.js"></script>
     <title>Anthony LTD</title>
 </head>
-<body onload="makeTable(records)" onload="welcomeMessage()">
+<body onload="makeTable(records)">
     <div class="hero-image">
         <div class="hero-text">
             <div id="clockbox" class="clock" ></div>
             <script src="clock.js"></script>
-          <h1>Porter's HR</h1>
+          <h1>Porter HR</h1>
         </div>
       </div>
 
-      <center>
-        <video width="750" height="348" autoplay controls loop>
+    <center>
+        <video width="750" height="348" autoplay muted loop controls>
         <source src="TheFutureOfHR.mp4" type="video/mp4">
             Your browser does not support the video
         </video>
     </center>
 
     <h2>Filter by Department</h2>
-    <select id="departments" class="filter" onchange="filterByDpt()">
-        <option value="select" class="filter">Select Department</option>
+    <label for="departments">Choose a department:</label>
+    <select name ="departments" id="departments" class="filter" onchange="filterByDpt()">
         <option value="All" class="filter">All</option>
         <option value="IT" class="filter">IT</option>
         <option value="Sales" class="filter">Sales</option>
         <option value="HR" class="filter">HR</option>
     </select>
 
-
     <table  cellpadding="1" cellspacing="1" class="mainTable" id="showData" ></table>
 
-    
     <div style="width: 100%;" style="height: 100%;">
         <input type="button" value="Add Employee Details" name="addEmp" onclick="addRecord()">
     </div>
-
     
     <input type="text" id="addNI" placeholder="NI Number" class="bottomBoxes" style="visibility: hidden;">
     <input type="text" id="addName" placeholder="Full Name" class="bottomBoxes" style="visibility: hidden;">

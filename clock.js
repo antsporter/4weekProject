@@ -9,15 +9,31 @@ function GetClock() {
         if(nMin<=9) nMin="0"+nMin;
         if(nSec<=9) nSec="0"+nSec;
 
-        let now = new Date();
-        let hrs = now.getHours();
         let msg = "";
 
-        if (hrs >  0) msg = "Morning Riser! "; // REALLY early
-        if (hrs >  6) msg = "Good morning ";      // After 6am
-        if (hrs > 12) msg = "Good afternoon ";    // After 12pm
-        if (hrs > 17) msg = "Good evening ";      // After 5pm
-        if (hrs > 22) msg = "Go to bed! ";
+        if (nHour <= 6) {
+            msg = "Morning Riser! ";
+        } else {
+            if (nHour < 12) {
+                msg = "Good morning ";
+            } else {
+                if (nHour <= 13) {
+                    msg = "Happy Lunchtime "
+                } else {
+                if (nHour < 17) {
+                    msg = "Good afternoon ";
+                } else {
+                    if (nHour < 22) {
+                        msg = "Good evening ";
+                    } else {
+                        if (nHour >= 22) {
+                            msg = "Go to bed! ";
+                        }
+                    }
+                }
+            }
+        }
+        }
     let clocktext=msg+"it's "+nHour+":"+nMin+":"+nSec+" "+tday[nDay]+", "+tmonth[nMonth]+" "+nDate;
     document.getElementById('clockbox').innerHTML=clocktext;
     }
