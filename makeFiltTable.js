@@ -1,10 +1,10 @@
 
-function makeTable2(filterbydepartment) {
+function makeFiltTable(newRecords) {
 
     let col = [];
-    for (let i = 0; i < filterbydepartment.length; i++) {
-        for (let key in filterbydepartment[i]) {
-            if (col.indexOf(key)=== -1) {
+    for (let i = 0; i < newRecords.length; i++) {
+        for (let key in newRecords[i]) {
+            if (col.indexOf(key) === -1) {
                 col.push(key);
             }
         }
@@ -21,11 +21,11 @@ function makeTable2(filterbydepartment) {
         tr.appendChild(th);
     }
 
-    for (let i = 0; i < filterbydepartment.length; i++) {
+    for (let k = 0; k < newRecords.length; k++) {
         tr = table.insertRow(-1);
         for (let j = 0; j < col.length; j++) {
             let tabCell = tr.insertCell(-1);
-            tabCell.innerHTML = filterbydepartment[i][col[j]];    
+            tabCell.innerHTML = newRecords[k][col[j]];    
         }
     }
 

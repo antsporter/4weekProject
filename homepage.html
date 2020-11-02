@@ -11,7 +11,7 @@
     <script src="makeTable.js"></script>
     <script src="deleteRecord.js"></script>
     <script src="editRecord.js"></script>
-    <script src="makeTable2.js"></script>
+    <script src="makeFiltTable.js"></script>
     <title>Anthony LTD</title>
 </head>
 <body onload="makeTable(records)">
@@ -20,15 +20,15 @@
         <div class="hero-text">
             <div id="clockbox" class="clock" ></div>
             <script src="clock.js"></script>
-          <h1>Porter HR</h1>
+            <h1>Porter HR</h1>
         </div>
-      </div>
+    </div>
 
-      <div id="hero">
-        <video playsinline autoplay muted loop poster="placeholder.jpg" id="bgvideo" width="x" height="y">
+    <div id="hero">
+        <video playsinline autoplay muted loop id="bgvideo" width="x" height="y">
         <source src="Clouds.mp4" type="video/mp4">
         </video>
-        </div>
+    </div>
 
 
 
@@ -47,11 +47,14 @@
     <input type="text" id="addAdd" placeholder="Address" class="bottomBoxes" style="visibility: hidden;" required>
     <input type="text" id="addDep" placeholder="Department" class="bottomBoxes" style="visibility: hidden;" required>
     
-    <center><div id="confAdd"></div> <div id="saveChanges"></div></center>
+    <center>
+        <div id="confAdd"></div> 
+        <div id="saveChanges"></div>
+    </center>
 
     <table  cellpadding="1" cellspacing="1" class="mainTable" id="showData" ></table>
 
-        <center>
+    <center>
         <video width="750" height="348" autoplay muted loop playsinline controls>
         <source src="TheFutureOfHR.mp4" type="video/mp4">
             Your browser does not support the video
